@@ -1,7 +1,7 @@
 <?php
 $curl = curl_init();
 
-curl_setopt($curl, CURLOPT_URL, "http://localhost:8080/skill");
+curl_setopt($curl, CURLOPT_URL, "http://localhost:2594/skill");
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
 $output = curl_exec($curl);
 curl_close($curl);
