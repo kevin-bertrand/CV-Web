@@ -1,3 +1,13 @@
+<?php
+$curl = curl_init();
+
+curl_setopt($curl, CURLOPT_URL, "http://localhost:8080/education");
+curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+$output = curl_exec($curl);
+curl_close($curl);
+$educations = json_decode($output, true)
+?>
+
 <section id="education">
     <div class="container">
         <div class="row">
@@ -7,48 +17,31 @@
             </div>
         </div>
 
+
         <div class="row justify-content-center">
-            <div class="col-md-6">
-                <div class="education-block">
-                    <h5>2022 (en cours)</h5>
-                    <i class="bi bi-book-half"></i>
-                    <h3>OpenClassrooms</h3>
-                    <h4>Développeur d'application iOS (Bac+3/4)</h4>
-                    <h5>e-learning</h5>
-                    <div class="red-divider"></div>
-                    <p>Développer, tester et valider les fonctionnalités de l'application</p>
-                    <p>Assuer le support technique</p>
-                    <p>Produire de la documentation technique et fonctionnelle</p>
-                    <p>Corriger et mettre à jour une application</p>
-                    <p>Analyser un cahier des charges</p>
+            <?php
+            foreach (array_reverse($educations) as &$education) {
+                ?>
+                <div class="col-md-6">
+                    <div class="education-block">
+                        <h5><?= date("Y", $education["endingDate"]) ?></h5>
+                        <i class="bi bi-book-half"></i>
+                        <h3><?= $education["school"] ?></h3>
+                        <h4><?= $education["title"] ?></h4>
+                        <h5><?= $education["location"] ?></h5>
+                        <div class="red-divider"></div>
+                        <?php
+                        foreach ($education["subjects"] as &$subject) {
+                            ?>
+                            <p><?= $subject ?></p>
+                            <?php
+                        }
+                        ?>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-6">
-                <div class="education-block">
-                    <h5>2015-2018</h5>
-                    <i class="bi bi-book-half"></i>
-                    <h3><a href="public/docs/Diplome-Bachelier.pdf" target="_blank">Haute Ecole de Namur-Liège-Luxembourg (Hénallux)</a></h3>
-                    <h4>Bachelier en informatique et système finalité automation (Bac+3)</h4>
-                    <h5>Namur - Belgique</h5>
-                    <div class="red-divider"></div>
-                    <p>Automation, électricité et systèmes électrotechniques</p>
-                    <p>Programmation C et Python</p>
-                    <p>Gestion de projets</p>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="education-block">
-                    <h5>2009-2015</h5>
-                    <i class="bi bi-book-half"></i>
-                    <h3><a href="public/docs/Diplome-CESS.pdf" target="_blank">Collège saint-Guibert</a></h3>
-                    <h4>CESS et CQ6 en électricien-automaticien (BAC)</h4>
-                    <h5>Gembloux - Belgique</h5>
-                    <div class="red-divider"></div>
-                    <p>Électricité domestique et industrielle</p>
-                    <p>Automation</p>
-                    <p>Dessins assistés par odinateurs (macaniques et électiques)</p>
-                </div>
-            </div>
+                <?php
+            }
+            ?>
         </div>
     </div>
 </section>

@@ -13,7 +13,6 @@
 
     <script src="https://kit.fontawesome.com/f3d86bd153.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
     <script src="public/js/formQuery.js"></script>
     <script src="public/js/scrollScript.js"></script>
     <script src="public/js/animationScript.js"></script>
@@ -76,6 +75,7 @@
     <footer class="text-center">
         <a href="#" class="back-to-top-link" id="go-top-button"><i class="bi bi-chevron-up"></i></a>
         <h5>© 2022 - Kevin Bertrand</h5>
-    </footer>    
+    </footer> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 </body>
 </html>
