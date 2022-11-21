@@ -60,6 +60,11 @@ ol, ul {
     }
 }
 
+.btn-outline-primary {
+    border-color: var(--main-title-color) !important;
+    color: var(--main-title-color) !important;
+}
+
 /* Navigation */
 .navbar {
     background: white;
@@ -508,7 +513,7 @@ ol, ul {
     background-color: rgb(0,0,0);
     background-color: rgba(0,0,0,0.9);
 }
-  
+
 .modal-content {
     margin: auto;
     display: block;
@@ -517,7 +522,7 @@ ol, ul {
     background-color: rgb(0,0,0);
     background-color: rgba(0,0,0,0);
 }
-  
+
 #caption, #newWindow {
     margin: auto;
     display: block;
@@ -533,17 +538,17 @@ ol, ul {
 #newWindow:hover {
     color: var(--main-title-color) !important;
 }
-  
+
 .modal-content, #caption, #newWindow { 
     animation-name: zoom;
     animation-duration: 0.6s;
 }
-  
+
 @keyframes zoom {
     from {transform:scale(0)} 
     to {transform:scale(1)}
 }
-  
+
 .close {
     position: absolute;
     top: 15px;
@@ -553,7 +558,7 @@ ol, ul {
     font-weight: bold;
     transition: 0.3s;
 }
-  
+
 .close:hover, .close:focus {
     color: #bbb;
     text-decoration: none;
@@ -564,6 +569,20 @@ ol, ul {
     .modal-content {
         width: 100%;
     }
+}
+
+.projects-category-btns {
+    margin-bottom: 20px;
+}
+
+.btn-group>.project-category-btn:checked+.btn {
+    background-color: var(--main-title-color) !important;
+    color: white !important;
+}
+
+.btn-group>.project-category-btn:hover+.btn {
+    background-color: var(--main-opacity-color) !important;
+    color: white !important;
 }
 
 /* CONTACT */
