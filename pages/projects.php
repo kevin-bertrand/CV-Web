@@ -67,6 +67,10 @@
         function downloadProjects() {
             $.ajax({
                 url: 'http://cv.desyntic.com:2570/project',
+                "headers": {
+                    "accept": "application/json",
+                    "Access-Control-Allow-Origin":"*"
+                }
             })
             .done(function (data) {
                 data.sort(function(a, b){
