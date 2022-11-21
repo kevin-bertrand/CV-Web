@@ -30,7 +30,13 @@ $projects = json_decode($output, true);
                         <h4><?= $project["company"] ?></h4>
                         <p class="text-muted"><small><i class="bi bi-clock"></i> <?= date("F Y", $project["date"]) ?></small></p>
                         <p><?= $project["description"] ?></p>
-                        <p><a href=<?= $project["github"] ?> target="_blank"><i class="bi bi-github"></i> Lien GitHub du projet</a></p>
+                        <?php
+                        if (is_null($project["github"]) === false) {
+                        ?>
+                            <p><a href=<?= $project["github"] ?> target="_blank"><i class="bi bi-github"></i> Lien GitHub du projet</a></p>
+                        <?php
+                        }
+                        ?>
                     </div>
                 </div>
                 <?php
