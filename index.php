@@ -22,7 +22,6 @@
 <body data-bs-spy="scroll" data-bs-target="#navigation" data-bs-offset="100" class="scrollspy" tabindex="0">
     <?php
         header("Access-Control-Allow-Origin: *");
-        header("content-type: application/json");
     ?>
     <nav class="navbar sticky-top navbar-expand-xxl justify-content-md-center" id="navigation">
         <div class="container">
