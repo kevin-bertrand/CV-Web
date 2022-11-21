@@ -61,8 +61,8 @@ $projects = json_decode($output, true);
         function showModal(src, object) {
             modal.style.display = "block";
             navigationBar.style.display = "none";
-            modalImg.src = src.replace("&ensp", " ");
-            captionText.innerHTML = object;
+            modalImg.src = src;
+            captionText.innerHTML = object.replace("&ensp", " ");
             newButton.setAttribute('href', src);
         }
 
