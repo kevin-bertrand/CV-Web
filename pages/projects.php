@@ -62,7 +62,7 @@ $projects = json_decode($output, true);
             modal.style.display = "block";
             navigationBar.style.display = "none";
             modalImg.src = src;
-            captionText.innerHTML = object.replace("&ensp", " ");
+            captionText.innerHTML = object.replace(/&ensp/g, " ");
             newButton.setAttribute('href', src);
         }
 
