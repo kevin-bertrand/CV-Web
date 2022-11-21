@@ -22,7 +22,7 @@ $projects = json_decode($output, true);
                 ?>
                 <div class="row justify-content-between project-view align-items-center">
                     <div class="col-md-6 project_image">
-                        <img src=<?= "public/img/" . $project["mediaPath"] ?> onclick=<?= 'showModal("public/img/' . $project['mediaPath'] . '","' . htmlspecialchars($project['title']) . '")' ?> />
+                        <img src=<?= "public/img/" . $project["mediaPath"] ?> onclick=<?= 'showModal("public/img/' . $project['mediaPath'] . '","' . str_replace(" ", "&ensp", htmlspecialchars($project['title'])) . '")' ?> />
                     </div>
 
                     <div class="col-md-5">
