@@ -39,6 +39,7 @@ function getList($title, $skills, $section) {
         <?php
             getList("Frontend", $skills, "frontend");
             getList("Backend", $skills, "backend");
+            getList("Automatisation", $skills, "automation");
             getList("Management", $skills, "management");
             getList("Autre", $skills, "other");
         ?>
