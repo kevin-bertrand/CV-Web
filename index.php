@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <?php
-        header("Access-Control-Allow-Origin: *");
-        header("content-type: application/json");
-    ?>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -22,6 +18,10 @@
     <script src="public/js/animationScript.js"></script>
 
     <title>Kevin Bertrand</title>
+    <?php
+        header("Access-Control-Allow-Origin: *");
+        header("content-type: application/json");
+    ?>
 </head>
 <body data-bs-spy="scroll" data-bs-target="#navigation" data-bs-offset="100" class="scrollspy" tabindex="0">
     <nav class="navbar sticky-top navbar-expand-xxl justify-content-md-center" id="navigation">
