@@ -66,6 +66,7 @@
 
         function downloadProjects() {
             $.ajax({
+                xhrFields: { withCredentials: true }, 
                 url: 'http://cv.desyntic.com:2570/project',
                 "headers": {
                     "accept": "application/json",
