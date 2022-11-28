@@ -28,7 +28,7 @@ $educations = json_decode($output, true)
                         <i class="bi bi-book-half"></i>
                         <?php
                             if (isset($education["documentPath"])) {
-                                echo "<a href='" . $education["documentPath"] . "' target='_blank'><h3>" . $education["school"] . "</h3></a>";
+                                echo "<a href='/public/docs/" . $education["documentPath"] . "' target='_blank'><h3>" . $education["school"] . "</h3></a>";
                             } else {
                                 echo "<h3>" . $education["school"] . "</h3>";
                             }
