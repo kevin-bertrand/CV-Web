@@ -26,6 +26,13 @@ $educations = json_decode($output, true)
                     <div class="education-block">
                         <h5><?= date("Y", $education["endingDate"]) ?></h5>
                         <i class="bi bi-book-half"></i>
+                        <?php
+                            if (isset($education["document"])) {
+                                echo "<a href='" . $education["document"] . "' target='_blank'><h3>" . $education["school"] . "</h3></a>";
+                            } else {
+                                echo "<h3>" . $education["school"] . "</h3>";
+                            }
+                        ?>
                         <h3><?= $education["school"] ?></h3>
                         <h4><?= $education["title"] ?></h4>
                         <h5><?= $education["location"] ?></h5>
