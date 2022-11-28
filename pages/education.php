@@ -33,7 +33,6 @@ $educations = json_decode($output, true)
                                 echo "<h3>" . $education["school"] . "</h3>";
                             }
                         ?>
-                        <h3><?= $education["school"] ?></h3>
                         <h4><?= $education["title"] ?></h4>
                         <h5><?= $education["location"] ?></h5>
                         <div class="red-divider"></div>
